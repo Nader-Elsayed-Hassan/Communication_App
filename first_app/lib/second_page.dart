@@ -1,8 +1,8 @@
-// ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:first_app/google_signIn_page.dart';
 
-class GoogleSignInPage extends StatelessWidget {
-  const GoogleSignInPage({super.key});
+class second_page extends StatelessWidget {
+  const second_page({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +42,7 @@ class GoogleSignInPage extends StatelessWidget {
                   const SizedBox(height: 30),
                   FittedBox(
                     child: Text(
-                      "Welcome to the Google Sign-In Page",
+                      "Welcome to the Second Page",
                       style: TextStyle(
                         fontSize: 24,
                         color: Colors.white,
@@ -53,15 +53,41 @@ class GoogleSignInPage extends StatelessWidget {
                   const SizedBox(height: 20),
                   TextField(
                     decoration: InputDecoration(
-                      labelText: 'Enter your email',
+                      labelText: 'Enter your message',
                       labelStyle: TextStyle(color: Colors.white70),
                       filled: true,
                       fillColor: Colors.white24,
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide.none,
                       ),
                     ),
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  const SizedBox(height: 20),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const google_signIn_page(),
+                        ),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      elevation: 10,
+                      shadowColor: Colors.white70,
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 120,
+                        vertical: 15,
+                      ),
+                      textStyle: const TextStyle(
+                        fontSize: 20,
+                        color: Color.fromARGB(249, 0, 0, 0),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    child: const Text("Google Sign In"),
                   ),
                   const SizedBox(height: 20),
                   ElevatedButton(
@@ -69,6 +95,7 @@ class GoogleSignInPage extends StatelessWidget {
                       Navigator.pop(context);
                     },
                     style: ElevatedButton.styleFrom(
+                      elevation: 5,
                       padding: const EdgeInsets.symmetric(
                         horizontal: 120,
                         vertical: 15,

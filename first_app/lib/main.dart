@@ -1,4 +1,4 @@
-import 'package:first_app/SecondPage.dart';
+import 'package:first_app/second_page.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -137,7 +137,7 @@ class HomePage extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const SecondPage(),
+                                builder: (context) => const second_page(),
                               ),
                             );
                           },
