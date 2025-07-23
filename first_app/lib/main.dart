@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Communication App',
       debugShowCheckedModeBanner: false,
       home: const HomePage(),
     );
@@ -61,7 +62,8 @@ class HomePage extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Icon(Icons.star, color: Color(0xffF8FE11)),
+                        const Icon(Icons.person, color: Color(0xffF8FE11)),
+                        const SizedBox(width: 10),
                         Text(
                           "Nader",
                           style: TextStyle(
@@ -70,7 +72,7 @@ class HomePage extends StatelessWidget {
                             color: Color.fromARGB(255, 255, 254, 253),
                           ),
                         ),
-                        const Icon(Icons.star, color: Color(0xffF8FE11)),
+                        // const Icon(Icons.person, color: Color(0xffF8FE11)),
                       ],
                     ),
                   ),
@@ -79,9 +81,10 @@ class HomePage extends StatelessWidget {
                     child: Row(
                       children: [
                         const Icon(
-                          Icons.star,
+                          Icons.developer_mode,
                           color: Color.fromARGB(255, 224, 6, 6),
                         ),
+                        const SizedBox(width: 10),
                         const Text(
                           "Flutter Developer",
                           style: TextStyle(
@@ -89,10 +92,10 @@ class HomePage extends StatelessWidget {
                             color: Color(0xffF8FE11),
                           ),
                         ),
-                        const Icon(
-                          Icons.star,
-                          color: Color.fromARGB(255, 224, 6, 6),
-                        ),
+                        // const Icon(
+                        //   Icons.developer_mode,
+                        //   color: Color.fromARGB(255, 224, 6, 6),
+                        // ),
                       ],
                     ),
                   ),
