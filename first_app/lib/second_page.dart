@@ -75,12 +75,16 @@ class second_page extends StatelessWidget {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      elevation: 10,
-                      shadowColor: Colors.white70,
                       padding: const EdgeInsets.symmetric(
                         horizontal: 120,
                         vertical: 15,
                       ),
+                      elevation: 10,
+                      backgroundColor: const Color(0xffF8FE11),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      shadowColor: Colors.orangeAccent,
                       textStyle: const TextStyle(
                         fontSize: 20,
                         color: Color.fromARGB(249, 0, 0, 0),
@@ -96,6 +100,11 @@ class second_page extends StatelessWidget {
                     },
                     style: ElevatedButton.styleFrom(
                       elevation: 5,
+                      backgroundColor: const Color(0xffF8FE11),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      shadowColor: Colors.orangeAccent,
                       padding: const EdgeInsets.symmetric(
                         horizontal: 120,
                         vertical: 15,
