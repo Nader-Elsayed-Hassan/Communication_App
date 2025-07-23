@@ -1,3 +1,4 @@
+import 'package:first_app/SecondPage.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -128,6 +129,43 @@ class HomePage extends StatelessWidget {
                           context,
                         ),
                         const SizedBox(height: 20),
+                        ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const SecondPage(),
+                              ),
+                            );
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color(0xffF8FE11),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 115,
+                              vertical: 12,
+                            ),
+                            textStyle: TextStyle(
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold,
+                              // color: const Color.fromARGB(255, 226, 7, 7),
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              const Icon(
+                                Icons.navigate_next,
+                                color: Colors.black,
+                              ),
+                              const Text(
+                                "Next Page",
+                                style: TextStyle(color: Colors.black),
+                              ),
+                              const SizedBox(width: 10),
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -161,6 +199,7 @@ class HomePage extends StatelessWidget {
           final success = await launchUrl(uri, mode: mode);
           if (!success) {
             ScaffoldMessenger.of(
+              // ignore: use_build_context_synchronously
               context,
             ).showSnackBar(SnackBar(content: Text("Could not launch $text")));
           }
